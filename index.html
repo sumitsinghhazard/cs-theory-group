@@ -9,12 +9,15 @@
   <script src="js/loadComponents.js" defer></script>
 </head>
 <body>
-  <div id="header"></div>
+  <div id="header"></div> <!-- Header -->
 
   <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-lg-8">
-        <ul class="nav nav-tabs">
+        <div id="about"></div> <!-- About section -->
+
+        <!-- Tabs for Faculty and Students -->
+        <ul class="nav nav-tabs mt-4">
           <li class="nav-item">
             <button class="nav-link" id="faculty-tab" type="button">Faculty</button>
           </li>
@@ -22,13 +25,15 @@
             <button class="nav-link" id="students-tab" type="button">Students</button>
           </li>
         </ul>
-        <div id="content" class="mt-3"></div>
+
+        <div id="content" class="mt-3"></div> <!-- Dynamic content -->
       </div>
+
       <div class="col-lg-4">
-        <div id="calendar"></div>
-        <div id="seminars" class="mt-4"></div>
-        <div id="courses" class="mt-4"></div>
-        <div id="links" class="mt-4"></div>
+        <div id="calendar"></div>  <!-- Calendar -->
+        <div id="seminars" class="mt-4"></div>  <!-- Seminars -->
+        <div id="courses" class="mt-4"></div>  <!-- Courses -->
+        <div id="links" class="mt-4"></div>  <!-- Useful Links -->
       </div>
     </div>
   </div>
