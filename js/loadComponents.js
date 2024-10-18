@@ -1,14 +1,10 @@
-// loadComponents.js
 import { renderAbout } from './about.js';
-import { renderFaculty } from './faculty.js';
-import { renderStudents } from './students.js';
 import { renderSeminars } from './events.js';
 import { renderCourses } from './courses.js';
 
 export async function loadComponents() {
   try {
     renderAbout(); // Render the About section
-    await renderFaculty(); // Load faculty by default
     await renderSeminars(); // Load seminars
     await renderCourses(); // Load courses
     console.log("All components loaded successfully.");
