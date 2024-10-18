@@ -1,48 +1,25 @@
-// js/loadComponents.js
+// loadComponents.js
+import { renderAbout } from './about.js';
+import { renderFaculty } from './faculty.js';
+import { renderStudents } from './students.js';
+import { renderSeminars } from './events.js';
+import { renderCourses } from './courses.js';
 
-function loadComponent(id, file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) throw new Error(`Failed to load ${file}`);
-      return response.text();
-    })
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    })
-    .catch(error => console.error(error));
+export async function loadComponents() {
+  renderAbout(); // Render the About section
+  await renderFaculty(); // Load faculty by default
+  await renderSeminars(); // Load seminars
+  await renderCourses(); // Load courses
 }
 
-window.onload = function () {
-  // Load header and about section
-  loadComponent("header", "header.html");
-  loadComponent("about", "about.html"); // About section loaded by default
-
-  // Load default faculty content
-  loadComponent("content", "faculty.html");
-
-  // Load sidebar components
-  loadComponent("calendar", "sidebar/calendar.html");
-  loadComponent("seminars", "sidebar/seminars.html");
-  loadComponent("courses", "sidebar/courses.html");
-  loadComponent("links", "sidebar/links.html");
-
-  // Add event listeners for tab switching
-  document.getElementById("faculty-tab").classList.add("active");
-
-  document.getElementById("faculty-tab").addEventListener("click", () => {
-    loadComponent("content", "faculty.html");
-    setActiveTab("faculty-tab");
-  });
-
-  document.getElementById("students-tab").addEventListener("click", () => {
-    loadComponent("content", "students.html");
-    setActiveTab("students-tab");
-  });
-};
-
-function setActiveTab(activeTabId) {
-  document.querySelectorAll(".nav-link").forEach((tab) => {
-    tab.classList.remove("active");
-  });
-  document.getElementById(activeTabId).classList.add("active");
+// Fetch data function shared among components
+export async function fetchData(file) {
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error(`Failed to load ${file}`);
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
 }
