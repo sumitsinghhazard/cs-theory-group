@@ -1,4 +1,5 @@
 // renderContent.js
+
 import { loadComponents } from './loadComponents.js';
 import { renderFaculty } from './faculty.js';
 import { renderStudents } from './students.js';
