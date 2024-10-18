@@ -1,6 +1,5 @@
 // js/loadComponents.js
 
-// Function to load an HTML file into a specific element by ID
 function loadComponent(id, file) {
   fetch(file)
     .then(response => {
@@ -13,18 +12,21 @@ function loadComponent(id, file) {
     .catch(error => console.error(error));
 }
 
-// Load components on page load
 window.onload = function () {
+  // Load header and about section
   loadComponent("header", "header.html");
-  loadComponent("content", "faculty.html"); // Faculty loaded by default
+  loadComponent("about", "about.html"); // About section loaded by default
 
-  // Load modular sidebar components
+  // Load default faculty content
+  loadComponent("content", "faculty.html");
+
+  // Load sidebar components
   loadComponent("calendar", "sidebar/calendar.html");
   loadComponent("seminars", "sidebar/seminars.html");
   loadComponent("courses", "sidebar/courses.html");
   loadComponent("links", "sidebar/links.html");
 
-  // Add event listeners to tabs for dynamic content switching
+  // Add event listeners for tab switching
   document.getElementById("faculty-tab").classList.add("active");
 
   document.getElementById("faculty-tab").addEventListener("click", () => {
@@ -38,7 +40,6 @@ window.onload = function () {
   });
 };
 
-// Helper function to manage active tab state
 function setActiveTab(activeTabId) {
   document.querySelectorAll(".nav-link").forEach((tab) => {
     tab.classList.remove("active");
