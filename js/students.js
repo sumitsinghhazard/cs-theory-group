@@ -27,8 +27,8 @@ export async function renderStudents() {
         <img src="${person.photo}" alt="${person.name}" class="img-profile me-3" 
              style="width: 75px; height: 75px;">
         <div>
-          <strong>${person.name}</strong><br>
-          <span>${person.info}</span>
+          <a href="${person.website}" target="_blank"><strong>${person.name}</strong></a><br>
+          <span>Research: ${person.research}</span>
         </div>
       `;
 
