@@ -16,11 +16,16 @@ function loadComponent(id, file) {
 // Load components on page load
 window.onload = function () {
   loadComponent("header", "header.html");
-  loadComponent("sidebar", "sidebar.html");
   loadComponent("content", "faculty.html"); // Faculty loaded by default
 
+  // Load modular sidebar components
+  loadComponent("calendar", "sidebar/calendar.html");
+  loadComponent("seminars", "sidebar/seminars.html");
+  loadComponent("courses", "sidebar/courses.html");
+  loadComponent("links", "sidebar/links.html");
+
   // Add event listeners to tabs for dynamic content switching
-  document.getElementById("faculty-tab").classList.add("active"); // Set faculty tab as active
+  document.getElementById("faculty-tab").classList.add("active");
 
   document.getElementById("faculty-tab").addEventListener("click", () => {
     loadComponent("content", "faculty.html");
