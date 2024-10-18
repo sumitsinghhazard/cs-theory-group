@@ -3,10 +3,10 @@ import { fetchData } from './loadComponents.js'; // Import fetchData function
 export async function renderFaculty() {
   try {
     const data = await fetchData("data/faculty.json"); // Fetch faculty data
-    const container = document.getElementById("content");
+    const container = document.getElementById("faculty-content"); // Target the faculty-content div
 
     if (!container) {
-      console.error("Content container not found.");
+      console.error("Faculty content container not found.");
       return;
     }
 
@@ -37,7 +37,7 @@ export async function renderFaculty() {
 
   } catch (error) {
     console.error("Error rendering faculty content:", error);
-    const container = document.getElementById("content");
+    const container = document.getElementById("faculty-content");
     if (container) {
       container.innerHTML = "<p>Error loading faculty data. Please try again later.</p>";
     }
