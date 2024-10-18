@@ -1,14 +1,16 @@
 // renderContent.js
-import { loadComponents } from './loadComponents.js';
+document.addEventListener('DOMContentLoaded', async function () {
+  await loadComponents(); // Load components when DOM is ready
 
-window.onload = async function () {
-  await loadComponents(); // Load all components when the page loads
+  // Ensure these elements exist before adding listeners
+  const facultyTab = document.getElementById("faculty-tab");
+  const studentsTab = document.getElementById("students-tab");
 
-  // Event listeners for tabs
-  document.getElementById("faculty-tab").addEventListener("click", () => {
-    renderFaculty();
-  });
-  document.getElementById("students-tab").addEventListener("click", () => {
-    renderStudents();
-  });
-};
+  if (facultyTab && studentsTab) {
+    facultyTab.addEventListener("click", renderFaculty);
+    studentsTab.addEventListener("click", renderStudents);
+  } else {
+    console.error("Tabs not found. Check element IDs in HTML.");
+  }
+});
+
