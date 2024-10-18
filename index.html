@@ -22,6 +22,12 @@
   <div class="container-fluid mt-4">
     <div class="row">
       <div class="col-lg-8">
+        <!-- About Section -->
+        <div id="about" class="mt-3">
+          <h2>About CS Theory</h2>
+          <p>Computer Science Theory focuses on the fundamental principles of computation, algorithms, and data structures, exploring the limits of what can be computed and the efficiency of algorithms. Our faculty and students engage in cutting-edge research in areas such as computational theory, machine learning, and quantum computing.</p>
+        </div>
+
         <!-- Navigation Tabs -->
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -31,12 +37,6 @@
             <button class="nav-link" id="students-tab" type="button">Students</button>
           </li>
         </ul>
-
-        <!-- About Section -->
-        <div id="about" class="mt-3">
-          <h2>About CS Theory</h2>
-          <p>Computer Science Theory focuses on the fundamental principles of computation, algorithms, and data structures, exploring the limits of what can be computed and the efficiency of algorithms. Our faculty and students engage in cutting-edge research in areas such as computational theory, machine learning, and quantum computing.</p>
-        </div>
 
         <!-- Content Section -->
         <div id="content" class="mt-3"></div>
@@ -51,19 +51,15 @@
 
         <div id="seminars" class="mb-4">
           <h5>Upcoming Seminars</h5>
-          <div class="card">
-            <div class="card-body">
-              <p>No upcoming seminars scheduled.</p>
-            </div>
+          <div class="accordion" id="seminarsAccordion">
+            <!-- Dynamic seminar cards will be inserted here -->
           </div>
         </div> 
         
         <div id="courses" class="mb-4">
           <h5>Available Courses</h5>
-          <div class="card">
-            <div class="card-body">
-              <p>Available courses will be listed here.</p>
-            </div>
+          <div class="accordion" id="coursesAccordion">
+            <!-- Dynamic course cards will be inserted here -->
           </div>
         </div>
 
