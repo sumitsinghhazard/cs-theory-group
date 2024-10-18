@@ -1,5 +1,3 @@
-// renderContent.js
-
 import { loadComponents } from './loadComponents.js';
 import { renderFaculty } from './faculty.js';
 import { renderStudents } from './students.js';
@@ -13,20 +11,20 @@ document.addEventListener('DOMContentLoaded', async function () {
     const studentsTab = document.getElementById("students-tab");
 
     if (facultyTab && studentsTab) {
+      // Show faculty content by default
+      await renderFaculty();
+      switchToTab("faculty-content", "students-content");
+
       // Add event listeners for tab switching
-      facultyTab.addEventListener("click", () => {
-        renderFaculty(); // Show faculty content
+      facultyTab.addEventListener("click", async () => {
+        await renderFaculty(); // Show faculty content
         switchToTab("faculty-content", "students-content");
       });
 
-      studentsTab.addEventListener("click", () => {
-        renderStudents(); // Show student content
+      studentsTab.addEventListener("click", async () => {
+        await renderStudents(); // Show student content
         switchToTab("students-content", "faculty-content");
       });
-
-      // Show faculty content by default
-      renderFaculty();
-      switchToTab("faculty-content", "students-content");
     } else {
       console.error("Tabs not found. Check element IDs in HTML.");
     }
@@ -37,6 +35,13 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 // Helper function to handle tab switching logic
 function switchToTab(showId, hideId) {
-  document.getElementById(showId).style.display = 'block';
-  document.getElementById(hideId).style.display = 'none';
+  const showElement = document.getElementById(showId);
+  const hideElement = document.getElementById(hideId);
+
+  if (showElement && hideElement) {
+    showElement.style.display = 'block'; // Show the selected tab content
+    hideElement.style.display = 'none';   // Hide the other tab content
+  } else {
+    console.error(`Element with ID ${showId} or ${hideId} not found.`);
+  }
 }
