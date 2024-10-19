@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  background-color: #333; /* Dark background */
+  background-color: #333; /* Gray background */
 }
 
 header h1 {
@@ -42,4 +42,11 @@ header h1 {
 
 .bg-danger {
   background-color: #c00 !important; /* NC State red */
+}
+
+.text-white {
+  color: #fff !important; /* White text */
+}
+
+  text-decoration: underline; /* Add underline on hover for clarity */
 }
