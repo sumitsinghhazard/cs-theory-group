@@ -16,23 +16,21 @@ export async function renderCourses() {
   }
 
   courses.forEach((course, index) => {
-    const isFirst = index === 0; // Check if it's the first course
-
     const card = document.createElement("div");
     card.className = "accordion-item";
 
     card.innerHTML = `
       <h2 class="accordion-header" id="courseHeading${index}">
-        <button class="accordion-button ${isFirst ? '' : 'collapsed'}" 
+        <button class="accordion-button collapsed" 
                 type="button" data-bs-toggle="collapse" 
                 data-bs-target="#courseCollapse${index}" 
-                aria-expanded="${isFirst}" 
+                aria-expanded="false" 
                 aria-controls="courseCollapse${index}">
           ${course.name}
         </button>
       </h2>
       <div id="courseCollapse${index}" 
-           class="accordion-collapse collapse ${isFirst ? 'show' : ''}" 
+           class="accordion-collapse collapse" 
            aria-labelledby="courseHeading${index}" 
            data-bs-parent="#coursesAccordion">
         <div class="accordion-body">
