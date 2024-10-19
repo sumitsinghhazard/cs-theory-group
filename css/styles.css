@@ -40,6 +40,6 @@ header h1 {
   font-size: 1.5rem; /* Adjust font size as needed */
 }
 
-header img {
-  height: 50px; /* Adjust logo size */
+.bg-danger {
+  background-color: #c00 !important; /* NC State red */
 }
