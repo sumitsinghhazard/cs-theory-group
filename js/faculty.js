@@ -3,10 +3,10 @@ import { fetchData } from './loadComponents.js'; // Import fetchData function
 export async function renderFaculty() {
   try {
     const data = await fetchData("data/faculty.json"); // Fetch faculty data
-    const container = document.getElementById("faculty-content"); // Target the faculty-content div
+    const container = document.getElementById("faculty-content");
 
     if (!container) {
-      console.error("Faculty content container not found.");
+      console.error("Content container not found.");
       return;
     }
 
@@ -17,29 +17,30 @@ export async function renderFaculty() {
       return;
     }
 
-    // Create a card for each faculty member
-    data.forEach(person => {
-      const card = document.createElement("div");
-      card.className = "list-group-item d-flex align-items-center";
+    const row = document.createElement("div");
+    row.className = "row"; // Bootstrap row to contain faculty cards
 
-      // Set the card's HTML content
+    data.forEach((person, index) => {
+      const card = document.createElement("div");
+      card.className = "col-md-4 mb-4"; // 3 cards per row on medium screens and up
+
       card.innerHTML = `
-        <img src="${person.photo}" alt="${person.name}" class="img-profile me-3" 
-             style="width: 75px; height: 75px;">
-        <div>
-          <a href="${person.website}" target="_blank"><strong>${person.name}</strong></a><br>
-          <span>Research: ${person.research}</span>
+        <div class="card h-100 text-center">
+          <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">${person.name}</h5>
+            <p class="card-text">Research: ${person.research}</p>
+            <a href="${person.website}" target="_blank" class="btn btn-primary">Website</a>
+          </div>
         </div>
       `;
 
-      container.appendChild(card); // Append the card to the container
+      row.appendChild(card); // Append each card to the row
     });
 
+    container.appendChild(row); // Append the row to the content container
   } catch (error) {
     console.error("Error rendering faculty content:", error);
-    const container = document.getElementById("faculty-content");
-    if (container) {
-      container.innerHTML = "<p>Error loading faculty data. Please try again later.</p>";
-    }
+    container.innerHTML = "<p>Error loading faculty data. Please try again later.</p>";
   }
 }
