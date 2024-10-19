@@ -1,7 +1,33 @@
-.img-profile {
-  width: 80px;      /* Set image width */
-  height: 80px;     /* Set image height */
-  object-fit: cover; /* Maintain aspect ratio and crop overflow */
-  border-radius: 50%; /* Optional: Make the image circular */
-  margin-right: 15px; /* Add space between image and text */
+/* Reset body margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Light background color for better aesthetics */
+}
+
+/* Ensure consistent margin on both sides */
+.page-container {
+  max-width: 1200px; /* Limit the content width */
+  margin: 0 auto; /* Center the content horizontally */
+  padding-left: 20px; /* Add space on the left */
+  padding-right: 20px; /* Add space on the right */
+}
+
+/* Optional styling for header */
+#header {
+  margin-bottom: 20px;
+}
+
+/* Ensure cards have consistent spacing */
+.list-group-item {
+  margin-bottom: 15px;
+}
+
+/* Responsive handling */
+@media (max-width: 576px) {
+  .page-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
