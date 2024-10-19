@@ -34,7 +34,7 @@ body {
 
 /* Utility Bar Styles */
 .ncstate-utility-bar {
-  background-color: #A50034; /* NC State Red */
+  background-color: #808080; /* Gray color for the bar */
   color: white;
   padding: 10px 20px; /* Adjust the vertical and horizontal padding */
 }
@@ -45,16 +45,16 @@ body {
   align-items: center; /* Center items vertically */
 }
 
-.ncstate-utility-bar-home a {
-  color: white;
+.ncstate-home-link {
+  color: #A50034; /* NC State Red */
   font-weight: bold; /* Make the link bold */
   text-decoration: none; /* Remove underline */
   padding: 8px 15px; /* Adjust padding */
-  border: 2px solid white; /* Add border */
+  border: 2px solid #A50034; /* Add border in NC State Red */
   border-radius: 5px; /* Round the corners */
   transition: background-color 0.3s; /* Transition effect for hover */
 }
 
-.ncstate-utility-bar-home a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+.ncstate-home-link:hover {
+  background-color: rgba(165, 0, 52, 0.2); /* Lighten on hover */
 }
