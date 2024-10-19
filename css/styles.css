@@ -32,29 +32,14 @@ body {
   }
 }
 
-/* Utility Bar Styles */
-.ncstate-utility-bar {
-  background-color: #808080; /* Gray color for the bar */
-  color: white;
-  padding: 10px 20px; /* Adjust the vertical and horizontal padding */
+header {
+  background-color: #333; /* Dark background */
 }
 
-.ncstate-utility-bar .container {
-  display: flex;
-  justify-content: flex-start; /* Aligns items to the left */
-  align-items: center; /* Center items vertically */
+header h1 {
+  font-size: 1.5rem; /* Adjust font size as needed */
 }
 
-.ncstate-home-link {
-  color: #A50034; /* NC State Red */
-  font-weight: bold; /* Make the link bold */
-  text-decoration: none; /* Remove underline */
-  padding: 8px 15px; /* Adjust padding */
-  border: 2px solid #A50034; /* Add border in NC State Red */
-  border-radius: 5px; /* Round the corners */
-  transition: background-color 0.3s; /* Transition effect for hover */
-}
-
-.ncstate-home-link:hover {
-  background-color: rgba(165, 0, 52, 0.2); /* Lighten on hover */
+header img {
+  height: 50px; /* Adjust logo size */
 }
