@@ -14,16 +14,19 @@ document.addEventListener('DOMContentLoaded', async function () {
       // Show faculty content by default
       await renderFaculty();
       switchToTab("faculty-content", "students-content");
+      setActiveTab(facultyTab); // Set active class on faculty tab
 
       // Add event listeners for tab switching
       facultyTab.addEventListener("click", async () => {
         await renderFaculty(); // Show faculty content
         switchToTab("faculty-content", "students-content");
+        setActiveTab(facultyTab); // Set active class for faculty tab
       });
 
       studentsTab.addEventListener("click", async () => {
         await renderStudents(); // Show student content
         switchToTab("students-content", "faculty-content");
+        setActiveTab(studentsTab); // Set active class for students tab
       });
     } else {
       console.error("Tabs not found. Check element IDs in HTML.");
@@ -44,4 +47,13 @@ function switchToTab(showId, hideId) {
   } else {
     console.error(`Element with ID ${showId} or ${hideId} not found.`);
   }
+}
+
+// Helper function to set the active tab
+function setActiveTab(activeTab) {
+  const tabs = document.querySelectorAll('.nav-link'); // Select all tabs
+  tabs.forEach(tab => {
+    tab.classList.remove('active'); // Remove active class from all tabs
+  });
+  activeTab.classList.add('active'); // Add active class to the clicked tab
 }
