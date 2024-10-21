@@ -48,5 +48,20 @@ header h1 {
   color: #fff !important; /* White text */
 }
 
-  text-decoration: underline; /* Add underline on hover for clarity */
+.text-decoration: underline; /* Add underline on hover for clarity */
 }
+
+
+/* Styling the faculty name to make it look clickable */
+.name-link {
+  color: #007bff; /* Bootstrap's primary link color */
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.name-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: none; /* Removes underline on hover for a cleaner effect */
+}
+
