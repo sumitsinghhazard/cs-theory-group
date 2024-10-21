@@ -10,8 +10,8 @@ body {
 .page-container {
   max-width: 1200px; /* Limit the content width */
   margin: 0 auto; /* Center the content horizontally */
-  padding-left: 20px; /* Add space on the left */
-  padding-right: 20px; /* Add space on the right */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Optional styling for header */
@@ -48,10 +48,6 @@ header h1 {
   color: #fff !important; /* White text */
 }
 
-.text-decoration: underline; /* Add underline on hover for clarity */
-}
-
-
 /* Styling the faculty name to make it look clickable */
 .name-link {
   color: blue; /* Blue color to indicate it's a link */
@@ -64,4 +60,3 @@ header h1 {
   color: darkblue; /* Darker blue on hover */
   text-decoration: none; /* Removes underline for a cleaner hover effect */
 }
-
