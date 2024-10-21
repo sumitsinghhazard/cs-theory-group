@@ -54,14 +54,14 @@ header h1 {
 
 /* Styling the faculty name to make it look clickable */
 .name-link {
-  color: #007bff; /* Bootstrap's primary link color */
+  color: blue; /* Blue color to indicate it's a link */
   font-weight: bold;
   text-decoration: underline;
   transition: color 0.2s ease-in-out;
 }
 
 .name-link:hover {
-  color: #0056b3; /* Darker blue on hover */
-  text-decoration: none; /* Removes underline on hover for a cleaner effect */
+  color: darkblue; /* Darker blue on hover */
+  text-decoration: none; /* Removes underline for a cleaner hover effect */
 }
 
