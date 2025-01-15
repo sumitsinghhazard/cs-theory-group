@@ -13,11 +13,6 @@ body {
   padding: 20px;
 }
 
-header h1 {
-  font-size: 3rem; /* Large font size */
-  font-weight: bold; /* Bold text */
-  margin: 20px 0; /* Add spacing around the header */
-}
 
 /* Tabs spacing and styling */
 .nav-tabs .nav-link {
