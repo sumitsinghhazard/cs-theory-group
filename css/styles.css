@@ -17,14 +17,14 @@ body {
 /* Simplified header styling */
 header {
   text-align: center; /* Center the text */
-  background-color: transparent; /* Remove background color */
-  padding: 10px 0; /* Add some vertical spacing */
+  padding: 20px 0; /* Add vertical spacing */
 }
 
 header h1 {
   color: black; /* Black text color */
-  font-size: 1.5rem; /* Adjust font size as needed */
+  font-size: 3rem; /* Large font size for prominence */
   margin: 0; /* Remove margin for cleaner appearance */
+  font-weight: bold; /* Optional: Make it bold */
 }
 
 /* Ensure cards have consistent spacing */
