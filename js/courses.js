@@ -2,7 +2,7 @@ import { fetchData } from './loadComponents.js';
 
 export async function renderCourses() {
   const courses = await fetchData("data/courses.json");
-  const container = document.getElementById("coursesAccordion");
+  const container = document.getElementById("coursesList");
   container.innerHTML = ""; // Clear previous content
 
   if (courses.length === 0) {
