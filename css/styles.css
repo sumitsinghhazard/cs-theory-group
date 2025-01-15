@@ -13,6 +13,12 @@ body {
   padding: 20px;
 }
 
+/* Align the header and apply padding to move it down */
+header h1 {
+  font-size: 3rem; /* Large font size */
+  margin: 0; /* Remove default margin */
+  padding-top: 20px; /* Add padding to push it down */
+}
 
 /* Tabs spacing and styling */
 .nav-tabs .nav-link {
