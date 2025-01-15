@@ -15,7 +15,7 @@ body {
 
 /* Align the header and apply padding to move it down */
 header h1 {
-  font-size: 2rem !important; /* Large font size */
+  font-size: 3rem !important; /* Large font size */
   margin: 0; /* Remove default margin */
   padding-top: 20px; /* Add padding to push it down */
 }
