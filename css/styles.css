@@ -70,6 +70,7 @@ header h1 {
   width: 20%; /* Restrict width to 20% */
   vertical-align: middle; /* Align text vertically */
   border-radius: 0; /* Remove any curves for sharp edges */
+  border-right: 1px solid white; /* Add a white border to separate columns */
 }
 
 .monthdate {
@@ -102,10 +103,13 @@ header h1 {
 .cal {
   width: 100%; /* Ensure table spans the container */
   border-spacing: 0; /* Remove default table spacing */
+  border-collapse: separate; /* Separate rows */
+  border-spacing: 0 10px; /* Add spacing between rows */
 }
 
 .cal tr {
-  margin-bottom: 10px; /* Space between rows */
   display: table-row; /* Ensure rows stay in the table context */
   width: 100%; /* Uniform width for all rows */
+  background-color: white; /* Background color for rows */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
 }
