@@ -1,5 +1,5 @@
 import { renderAbout } from './about.js';
-import { renderSeminars } from './events.js';
+import { renderEvents } from './events.js';
 import { renderCourses } from './courses.js';
 
 export async function loadComponents() {
