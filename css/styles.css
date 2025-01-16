@@ -71,6 +71,7 @@ header h1 {
   vertical-align: middle; /* Align text vertically */
   border-radius: 0; /* Remove any curves for sharp edges */
   border-right: 1px solid white; /* Add a white border to separate columns */
+  height: 120px; /* Set a fixed height for each .calevent */
 }
 
 .monthdate {
@@ -81,17 +82,10 @@ header h1 {
 .eventtitle {
   padding: 10px 15px; /* Add padding for better spacing */
   width: 80%; /* Use 80% of the row */
-}
-
-.eventtitle a {
-  color: #0056b3; /* Link color */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.eventtitle a:hover {
-  text-decoration: underline;
-  color: #003d99; /* Darker blue on hover */
+  height: 120px; /* Ensure the event description box also has the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align elements within the eventtitle */
 }
 
 .eventdescription {
@@ -113,3 +107,4 @@ header h1 {
   background-color: white; /* Background color for rows */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
 }
+
