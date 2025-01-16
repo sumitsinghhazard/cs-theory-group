@@ -5,7 +5,7 @@ import { renderCourses } from './courses.js';
 export async function loadComponents() {
   try {
     renderAbout(); // Render the About section
-    await renderSeminars(); // Load seminars
+    await renderEvents(); // Load seminars
     await renderCourses(); // Load courses
     console.log("All components loaded successfully.");
   } catch (error) {
