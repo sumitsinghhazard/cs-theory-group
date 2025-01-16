@@ -79,6 +79,7 @@ header h1 {
   font-weight: normal; /* Normal weight for date */
 }
 
+/* Event title container styling */
 .eventtitle {
   padding: 5px 10px; /* Reduced padding for closer spacing */
   width: 80%; /* Use 80% of the row */
@@ -86,26 +87,34 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensure space between title and description */
+  overflow: hidden; /* Prevent overflowing content */
 }
 
-/* Event title link styles */
+/* Ensure title doesn't affect layout if it wraps */
 .eventtitle a {
   text-decoration: none; /* Remove underlines from the title */
   color: #000; /* Default text color for title */
   font-weight: normal; /* Set font weight to normal */
+  line-height: 1.2em; /* Adjust line height for better spacing */
+  white-space: nowrap; /* Prevent title from wrapping to multiple lines */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if title overflows */
 }
+
+/* Adjust description positioning */
+.eventdescription {
+  color: #666; /* Subtle gray for descriptions */
+  font-size: 0.9em;
+  margin-top: 5px; /* Reduce space between title and description */
+  flex-grow: 1; /* Ensure the description grows to fill available space */
+  overflow: hidden; /* Prevent overflowing content */
+}
+
 
 /* Hover effect for event title */
 .eventtitle a:hover {
   color: #d0021b; /* Change text color to NC State red */
   text-decoration: none; /* Ensure no underline on hover */
-}
-
-
-.eventdescription {
-  color: #666; /* Subtle gray for descriptions */
-  font-size: 0.9em;
-  margin-top: 5px; /* Reduce space between title and description */
 }
 
 /* Add spacing between rows */
