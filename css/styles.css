@@ -81,7 +81,7 @@ header h1 {
 
 /* Event title container styling */
 .eventtitle {
-  padding: 5px 10px; /* Reduced padding for closer spacing */
+  padding: 15px 7px; /* Reduced padding for closer spacing */
   width: 80%; /* Use 80% of the row */
   height: 120px; /* Ensure the event description box also has the same height */
   display: flex;
