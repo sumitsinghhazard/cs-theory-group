@@ -32,19 +32,19 @@ header h1 {
 }
 
 /* Sidebar sections */
-#calendar, #seminars, #courses, #links {
+/*#calendar, #seminars, #courses, #links {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   background: #fff;
-}
+}*/
 
 /* Sidebar headings */
-#calendar h5, #seminars h5, #courses h5, #links h5 {
-  color: #d0021b; /* NC State red */
+/*#calendar h5, #seminars h5, #courses h5, #links h5 {
+  color: #d0021b;
   font-size: 1.2rem;
   font-weight: bold;
-}
+}*/
 
 /* Links styling */
 #links ul {
