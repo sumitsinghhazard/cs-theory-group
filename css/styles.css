@@ -68,6 +68,8 @@ header h1 {
   padding: 10px;
   text-align: center;
   border-radius: 5px; /* Slight rounding for modern look */
+  width: 20%; /* Restrict width to 20% */
+  vertical-align: middle; /* Align text vertically */
 }
 
 .monthdate {
@@ -76,8 +78,8 @@ header h1 {
 }
 
 .eventtitle {
-  padding: 5px 10px 10px 15px;
-  width: 45%;
+  padding: 10px 15px; /* Add padding for better spacing */
+  width: 80%; /* Take the remaining 80% */
 }
 
 .eventtitle a {
@@ -96,3 +98,8 @@ header h1 {
   font-size: 0.9em;
 }
 
+/* Add spacing between rows */
+.cal tr {
+  margin-bottom: 10px; /* Space between rows */
+  display: block; /* Ensure rows are treated as block elements */
+}
