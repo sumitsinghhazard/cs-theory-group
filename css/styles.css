@@ -76,28 +76,28 @@ header h1 {
 
 .monthdate {
   font-size: 32px;
-  font-weight: bold; /* Emphasize date */
+  font-weight: normal; /* Normal weight for date */
 }
 
 .eventtitle {
-  padding: 5px 10px; /* Reduce padding for closer spacing */
+  padding: 5px 10px; /* Reduced padding for closer spacing */
   width: 80%; /* Use 80% of the row */
   height: 120px; /* Ensure the event description box also has the same height */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; /* Distribute content evenly within the box */
+  justify-content: space-between; /* Ensure space between title and description */
 }
 
 .eventtitle a {
   text-decoration: none; /* Remove underlines from the title */
   color: #000; /* Default text color for title */
-  font-weight: bold; /* Optional: Make the title bold */
+  font-weight: normal; /* Set font weight to normal */
 }
 
 .eventdescription {
   color: #666; /* Subtle gray for descriptions */
   font-size: 0.9em;
-  margin-top: 5px; /* Space between title and description */
+  margin-top: 5px; /* Reduce space between title and description */
 }
 
 /* Add spacing between rows */
@@ -114,4 +114,3 @@ header h1 {
   background-color: white; /* Background color for rows */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
 }
-
