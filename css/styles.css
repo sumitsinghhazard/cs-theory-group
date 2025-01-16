@@ -67,19 +67,19 @@ header h1 {
   color: white;
   padding: 10px;
   text-align: center;
-  border-radius: 5px; /* Slight rounding for modern look */
   width: 20%; /* Restrict width to 20% */
   vertical-align: middle; /* Align text vertically */
+  border-radius: 0; /* Remove any curves for sharp edges */
 }
 
 .monthdate {
   font-size: 32px;
-  font-weight: bold; /* Make date stand out */
+  font-weight: bold; /* Emphasize date */
 }
 
 .eventtitle {
   padding: 10px 15px; /* Add padding for better spacing */
-  width: 80%; /* Take the remaining 80% */
+  width: 80%; /* Use 80% of the row */
 }
 
 .eventtitle a {
@@ -93,13 +93,19 @@ header h1 {
   color: #003d99; /* Darker blue on hover */
 }
 
-.day_time {
-  color: #666; /* Subtle gray for time info */
+.eventdescription {
+  color: #666; /* Subtle gray for descriptions */
   font-size: 0.9em;
 }
 
 /* Add spacing between rows */
+.cal {
+  width: 100%; /* Ensure table spans the container */
+  border-spacing: 0; /* Remove default table spacing */
+}
+
 .cal tr {
   margin-bottom: 10px; /* Space between rows */
-  display: block; /* Ensure rows are treated as block elements */
+  display: table-row; /* Ensure rows stay in the table context */
+  width: 100%; /* Uniform width for all rows */
 }
