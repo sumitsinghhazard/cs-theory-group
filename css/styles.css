@@ -80,17 +80,24 @@ header h1 {
 }
 
 .eventtitle {
-  padding: 10px 15px; /* Add padding for better spacing */
+  padding: 5px 10px; /* Reduce padding for closer spacing */
   width: 80%; /* Use 80% of the row */
   height: 120px; /* Ensure the event description box also has the same height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align elements within the eventtitle */
+  justify-content: space-evenly; /* Distribute content evenly within the box */
+}
+
+.eventtitle a {
+  text-decoration: none; /* Remove underlines from the title */
+  color: #000; /* Default text color for title */
+  font-weight: bold; /* Optional: Make the title bold */
 }
 
 .eventdescription {
   color: #666; /* Subtle gray for descriptions */
   font-size: 0.9em;
+  margin-top: 5px; /* Space between title and description */
 }
 
 /* Add spacing between rows */
