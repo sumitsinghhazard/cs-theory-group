@@ -129,5 +129,4 @@ header h1 {
   display: table-row; /* Ensure rows stay in the table context */
   width: 100%; /* Uniform width for all rows */
   background-color: white; /* Background color for rows */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for better visibility */
 }
