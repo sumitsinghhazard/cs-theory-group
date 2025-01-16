@@ -88,11 +88,19 @@ header h1 {
   justify-content: space-between; /* Ensure space between title and description */
 }
 
+/* Event title link styles */
 .eventtitle a {
   text-decoration: none; /* Remove underlines from the title */
   color: #000; /* Default text color for title */
   font-weight: normal; /* Set font weight to normal */
 }
+
+/* Hover effect for event title */
+.eventtitle a:hover {
+  color: #d0021b; /* Change text color to NC State red */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
 
 .eventdescription {
   color: #666; /* Subtle gray for descriptions */
