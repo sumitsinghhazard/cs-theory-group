@@ -142,7 +142,7 @@ header h1 {
   flex-direction: column; /* Stack content vertically */
   justify-content: flex-start; /* Align content to the top */
   height: 120px; /* Reduced height for items */
-  padding: 10px; /* Add padding around content */
+  padding: 20px; /* Add padding around content */
   box-sizing: border-box; /* Include padding in the box size */
   border-radius: 0; /* No rounded corners */
   border: none; /* No border */
