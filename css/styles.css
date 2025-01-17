@@ -134,13 +134,13 @@ header h1 {
 
 /* Courses list item styling */
 .list-group-item {
-  background-color: var(--very-light-gray); /* Use the custom gray color */
+  background-color: #f2f2f2; /* Use light grey background color */
   color: #000; /* Black text for course name */
   margin-bottom: 10px; /* Spacing between items */
   width: 100%; /* Ensure all items take the full width of the container */
   display: flex; /* Use flex to align content */
   flex-direction: column; /* Arrange content vertically */
-  justify-content: space-between; /* Distribute content evenly */
+  justify-content: flex-start; /* Align items at the top */
   height: 150px; /* Fixed height for uniform sizing */
   padding: 15px; /* Add some padding for content spacing */
   box-sizing: border-box; /* Include padding in the element's size */
@@ -153,6 +153,7 @@ header h1 {
   margin: 0; /* Remove margin around the course name */
   font-weight: normal; /* Ensure course name is not bold */
   font-size: 1rem; /* Adjust font size for better readability */
+  margin-bottom: 5px; /* Add a small space below the course name */
 }
 
 /* Links styling */
@@ -166,17 +167,11 @@ header h1 {
   text-decoration: none; /* No underline on hover */
 }
 
-/* Ensure description is consistent */
+/* Ensure description is consistent and close to the title */
 .list-group-item p {
   margin: 0;
   color: #666; /* Subtle gray for descriptions */
   font-size: 0.9rem; /* Slightly smaller text for descriptions */
-  overflow: hidden; /* Prevent overflow of text */
-  text-overflow: ellipsis; /* Add ellipsis for long descriptions */
+  line-height: 1.4; /* Adjust line height for better readability */
 }
 
-
-.list-group-item a:hover {
-  color: #d0021b; /* NC State red on hover */
-  text-decoration: none; /* No underline on hover */
-}
