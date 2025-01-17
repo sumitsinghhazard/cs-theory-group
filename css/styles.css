@@ -180,7 +180,7 @@ header h1 {
 #links li a {
   color: #cc0000; /* Default red color for links */
   text-decoration: none;
-  font-weight: bold; /* Optional for emphasis */
+  font-weight: normal; /* Optional for emphasis */
 }
 
 #links li a:hover {
