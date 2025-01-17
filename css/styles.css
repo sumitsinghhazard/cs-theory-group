@@ -130,3 +130,28 @@ header h1 {
   width: 100%; /* Uniform width for all rows */
   background-color: white; /* Background color for rows */
 }
+
+
+/* Courses list item styling */
+.list-group-item {
+  background-color: #f8f9fa; /* Light grey background */
+  color: #000; /* Black text for course name */
+  border: 1px solid #ddd; /* Light border for separation */
+  margin-bottom: 10px; /* Spacing between items */
+  border-radius: 5px; /* Optional rounded corners for a softer look */
+}
+
+.list-group-item h5 {
+  margin: 0; /* Remove margin around the course name */
+  font-weight: normal; /* Ensure course name is not bold */
+}
+
+.list-group-item a {
+  text-decoration: none; /* Remove underline for links */
+  color: #000; /* Default black color for the link */
+}
+
+.list-group-item a:hover {
+  color: #d0021b; /* NC State red on hover */
+  text-decoration: none; /* No underline on hover */
+}
