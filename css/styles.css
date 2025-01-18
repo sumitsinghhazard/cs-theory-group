@@ -189,3 +189,11 @@ header h1 {
   color: #990000; /* More intense red on hover */
   text-decoration: none; /* Remove underline */
 }
+
+
+
+.btn:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove any box-shadow applied during focus */
+}
+
